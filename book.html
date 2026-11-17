@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d9663a'%3E%3Cellipse cx='6' cy='9' rx='2.2' ry='2.8'/%3E%3Cellipse cx='10' cy='5.5' rx='2.2' ry='2.8'/%3E%3Cellipse cx='14' cy='5.5' rx='2.2' ry='2.8'/%3E%3Cellipse cx='18' cy='9' rx='2.2' ry='2.8'/%3E%3Cpath d='M12 11c-3 0-6 3.6-6 6.3C6 19.4 7.6 20 9 20c1.3 0 2-.6 3-.6s1.7.6 3 .6c1.4 0 3-.6 3-2.7C18 14.6 15 11 12 11z'/%3E%3C/svg%3E">
+<title>Book a stay | Home for Paws</title>
+<meta name="description" content="Request a pet sitting stay and tell us all about your pet with our fun pre-stay questionnaire.">
+</head>
+<body data-page="book">
+<header id="site-header"></header>
+
+<main>
+  <section>
+    <div class="wrap" style="max-width:780px">
+      <h1>Book a stay</h1>
+      <p class="lead">Tell us your dates, then help us get to know your pet. It takes about 5 minutes, and the more you share, the more at home they'll feel. We'll reply within 24 hours to set up a free meet-and-greet.</p>
+
+      <div class="progress" aria-live="polite">
+        <div class="progress-bar"><div></div></div>
+        <small>0% complete</small>
+      </div>
+
+      <form data-hfp-form data-subject="Stay request" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <fieldset>
+          <legend>1. You and your dates</legend>
+          <div class="row">
+            <div class="field"><label for="owner_name">Your name</label><input id="owner_name" name="owner_name" type="text" required autocomplete="name"></div>
+            <div class="field"><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field">
+            <div class="q">What do you need?</div>
+            <div class="choices">
+              <label><input type="radio" name="service" value="Overnight stay" required> Overnight stay</label>
+              <label><input type="radio" name="service" value="Day care"> Day care</label>
+              <label><input type="radio" name="service" value="Drop-in visits"> Drop-in visits</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="start">Drop-off date</label><input id="start" name="start_date" type="date" required></div>
+            <div class="field"><label for="end">Pick-up date</label><input id="end" name="end_date" type="date" required></div>
+          </div>
+          <div class="field"><label for="suburb">Your suburb</label><input id="suburb" name="suburb" type="text" placeholder="e.g. Leumeah"></div>
+          <div class="field"><label for="emergency">Emergency contact while you're away <span class="hint">(name and phone)</span></label><input id="emergency" name="emergency_contact" type="text" required></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Meet your pet</legend>
+          <div class="row">
+            <div class="field"><label for="pet_name">Pet's name</label><input id="pet_name" name="pet_name" type="text" required></div>
+            <div class="field"><label for="nicknames">Any nicknames they answer to?</label><input id="nicknames" name="nicknames" type="text" placeholder="Sir Barksalot, Bubba..."></div>
+          </div>
+          <div class="field">
+            <div class="q">They are a...</div>
+            <div class="choices">
+              <label><input type="radio" name="species" value="Dog" required> Dog</label>
+              <label><input type="radio" name="species" value="Cat"> Cat</label>
+              <label><input type="radio" name="species" value="Rabbit / guinea pig"> Rabbit / guinea pig</label>
+              <label><input type="radio" name="species" value="Bird"> Bird</label>
+              <label><input type="radio" name="species" value="Other"> Something else</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="breed">Breed</label><input id="breed" name="breed" type="text"></div>
+            <div class="field"><label for="age">Age</label><input id="age" name="age" type="text" placeholder="e.g. 3 years"></div>
+          </div>
+          <div class="row">
+            <div class="field"><div class="q">Sex</div><div class="choices"><label><input type="radio" name="sex" value="Male"> Boy</label><label><input type="radio" name="sex" value="Female"> Girl</label></div></div>
+            <div class="field"><div class="q">Desexed?</div><div class="choices"><label><input type="radio" name="desexed" value="Yes"> Yes</label><label><input type="radio" name="desexed" value="No"> No</label></div></div>
+          </div>
+          <div class="field"><label for="three_words">Describe them in three words</label><input id="three_words" name="three_words" type="text" placeholder="Cheeky, cuddly, food-obsessed"></div>
+          <div class="field"><label for="superpower">If your pet were a superhero, what would their superpower be?</label><input id="superpower" name="superpower" type="text" placeholder="Hearing a cheese wrapper from three rooms away"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Personality check</legend>
+          <div class="field">
+            <label for="energy">Energy level</label>
+            <div class="scale"><span>Couch potato</span><input id="energy" name="energy_level" type="range" min="1" max="5" value="3"><span>Zoomies machine</span></div>
+          </div>
+          <div class="field">
+            <label for="cuddle">Cuddle level</label>
+            <div class="scale"><span>Independent</span><input id="cuddle" name="cuddle_level" type="range" min="1" max="5" value="3"><span>Velcro pet</span></div>
+          </div>
+          <div class="field">
+            <div class="q">How do they feel about...</div>
+            <div class="row">
+              <div class="field"><label for="with_dogs" class="hint">Other dogs</label><select id="with_dogs" name="with_dogs"><option value="">Choose</option><option>Loves them</option><option>Fine, after an introduction</option><option>Prefers not</option><option>Not sure</option></select></div>
+              <div class="field"><label for="with_cats" class="hint">Cats</label><select id="with_cats" name="with_cats"><option value="">Choose</option><option>Loves them</option><option>Fine, after an introduction</option><option>Wants to chase them</option><option>Not sure</option></select></div>
+              <div class="field"><label for="with_kids" class="hint">Kids</label><select id="with_kids" name="with_kids"><option value="">Choose</option><option>Loves them</option><option>Fine with calm kids</option><option>Prefers not</option><option>Not sure</option></select></div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="q">Things that make them nervous <span class="hint">(tick any)</span></div>
+            <div class="choices">
+              <label><input type="checkbox" name="fears" value="Thunderstorms"> Thunderstorms</label>
+              <label><input type="checkbox" name="fears" value="Fireworks"> Fireworks</label>
+              <label><input type="checkbox" name="fears" value="Vacuum cleaner"> The vacuum</label>
+              <label><input type="checkbox" name="fears" value="Strangers"> Strangers</label>
+              <label><input type="checkbox" name="fears" value="Being left alone"> Being left alone</label>
+              <label><input type="checkbox" name="fears" value="Car rides"> Car rides</label>
+              <label><input type="checkbox" name="fears" value="Bath time"> Bath time</label>
+              <label><input type="checkbox" name="fears" value="Nothing, fearless"> Nothing, they're fearless</label>
+            </div>
+          </div>
+          <div class="field"><label for="calm">What calms them down when they're worried?</label><textarea id="calm" name="calming" placeholder="A blanket that smells like home, gentle ear rubs, music..."></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. A day in their life</legend>
+          <div class="row">
+            <div class="field"><label for="wake">Usual wake-up time</label><input id="wake" name="wake_time" type="text" placeholder="6:30am"></div>
+            <div class="field"><label for="bed">Usual bedtime</label><input id="bed" name="bed_time" type="text" placeholder="9:30pm"></div>
+          </div>
+          <div class="field"><label for="meals">Meals: what, how much and when?</label><textarea id="meals" name="meals" placeholder="1 cup dry food at 7am and 6pm, with a spoon of wet food at dinner"></textarea></div>
+          <div class="field"><label for="treats">Favourite treats, and any foods they must NOT have</label><textarea id="treats" name="treats_and_allergies"></textarea></div>
+          <div class="field"><label for="walks">Walks or exercise</label><input id="walks" name="walks" type="text" placeholder="Two 30 minute walks, loves the park"></div>
+          <div class="field">
+            <div class="q">Where do they sleep?</div>
+            <div class="choices">
+              <label><input type="radio" name="sleep_spot" value="Own bed"> Their own bed</label>
+              <label><input type="radio" name="sleep_spot" value="Crate"> Crate</label>
+              <label><input type="radio" name="sleep_spot" value="On the couch"> The couch</label>
+              <label><input type="radio" name="sleep_spot" value="On the human bed"> Our bed (of course)</label>
+            </div>
+          </div>
+          <div class="field"><label for="toilet">Toilet routine and signals</label><input id="toilet" name="toilet_routine" type="text" placeholder="Sits by the back door; litter is cleaned daily"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Fun stuff</legend>
+          <div class="field"><label for="toys">Favourite toys and games</label><input id="toys" name="favourite_toys" type="text" placeholder="Squeaky duck, tug of war, chasing bubbles"></div>
+          <div class="field"><label for="scratch">Best scratch spot</label><input id="scratch" name="scratch_spot" type="text" placeholder="Behind the left ear"></div>
+          <div class="field"><label for="tricks">Tricks or words they know</label><input id="tricks" name="tricks" type="text" placeholder="Sit, paw, spin, 'walkies'"></div>
+          <div class="field"><label for="quirks">Funny habits or quirks we should know about</label><textarea id="quirks" name="quirks" placeholder="Steals socks, sings along to the doorbell..."></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. Health and safety</legend>
+          <div class="field"><div class="q">Vaccinations up to date?</div><div class="choices"><label><input type="radio" name="vaccinated" value="Yes" required> Yes</label><label><input type="radio" name="vaccinated" value="No"> No</label><label><input type="radio" name="vaccinated" value="Not sure"> Not sure</label></div></div>
+          <div class="field"><div class="q">Flea, tick and worm treatment current?</div><div class="choices"><label><input type="radio" name="parasite_treatment" value="Yes"> Yes</label><label><input type="radio" name="parasite_treatment" value="No"> No</label></div></div>
+          <div class="field"><label for="meds">Medications or health conditions <span class="hint">(dose and times)</span></label><textarea id="meds" name="medications"></textarea></div>
+          <div class="field">
+            <div class="q">Any of these? <span class="hint">(tick any)</span></div>
+            <div class="choices">
+              <label><input type="checkbox" name="behaviour" value="Escape artist"> Escape artist</label>
+              <label><input type="checkbox" name="behaviour" value="Jumps fences"> Jumps fences</label>
+              <label><input type="checkbox" name="behaviour" value="Pulls on lead"> Pulls on the lead</label>
+              <label><input type="checkbox" name="behaviour" value="Guards food or toys"> Guards food or toys</label>
+              <label><input type="checkbox" name="behaviour" value="Chews things"> Chews everything</label>
+              <label><input type="checkbox" name="behaviour" value="Barks a lot"> Big barker</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="vet">Your vet's name</label><input id="vet" name="vet_name" type="text" required></div>
+            <div class="field"><label for="vet_phone">Vet's phone</label><input id="vet_phone" name="vet_phone" type="tel" required></div>
+          </div>
+          <div class="field"><label for="microchip">Microchip number <span class="hint">(optional)</span></label><input id="microchip" name="microchip" type="text"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>7. Updates and permissions</legend>
+          <div class="field">
+            <div class="q">How would you like updates?</div>
+            <div class="choices">
+              <label><input type="radio" name="update_channel" value="SMS"> SMS</label>
+              <label><input type="radio" name="update_channel" value="WhatsApp"> WhatsApp</label>
+              <label><input type="radio" name="update_channel" value="Email"> Email</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="q">Can we share your pet's profile and photos on our "Our guests" page and social media?</div>
+            <div class="choices">
+              <label><input type="radio" name="share_profile" value="Yes"> Yes, show them off!</label>
+              <label><input type="radio" name="share_profile" value="Private only"> Keep it private</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="choices" style="display:flex"><span><input type="checkbox" name="vet_consent" value="Yes" required> If my pet is unwell or injured and I can't be reached, I agree Home for Paws can take them to a vet for treatment, at my cost.</span></label>
+          </div>
+          <div class="field"><label for="anything">Anything else we should know?</label><textarea id="anything" name="anything_else"></textarea></div>
+        </fieldset>
+
+        <div><button class="btn" type="submit">Send my request</button></div>
+      </form>
+      <div id="form-status" role="status" style="margin-top:20px"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/pets.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
