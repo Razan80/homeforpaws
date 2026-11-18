@@ -27,4 +27,14 @@ No build step, no database. Open `index.html` in a browser, or host the folder o
 
 ## Publishing with GitHub Pages
 
-In the repository on GitHub: Settings → Pages → Source: "Deploy from a branch" → pick the branch and `/ (root)` → Save. The site appears at `https://<username>.github.io/homeforpaws/` within a few minutes. A custom domain (e.g. homeforpaws.com.au) can be added on the same screen later.
+In the repository on GitHub: Settings → Pages → Source: "Deploy from a branch" → pick the branch and `/ (root)` → Save. The site appears at `https://<username>.github.io/homeforpaws/` within a few minutes. The `CNAME` file in this repo points the site at **homeforpaws.co**. At your domain registrar, add these DNS records:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | razan80.github.io |
+
+Then in Settings → Pages, enter `homeforpaws.co` as the custom domain and tick "Enforce HTTPS" once it becomes available (can take up to 24 hours).
