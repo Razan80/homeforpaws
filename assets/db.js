@@ -4,7 +4,7 @@
 (function () {
   var C = window.HFP_CONFIG || {};
   var LIVE = !!(C.supabaseUrl && C.supabaseAnonKey);
-  var SB_SRC = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js";
+  var SB_SRC = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js";
   var TABLES = ["pets", "enquiries", "clients", "stays", "stay_updates", "shelters", "contacts", "reminders"];
   var client = null;
 
