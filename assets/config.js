@@ -12,11 +12,11 @@ window.HFP_CONFIG = {
   phone: "", // optional, e.g. "0400 000 000"
 
   // Admin HQ database (see ADMIN-SETUP.md). Both values come from
-  // Supabase -> Project Settings -> API. The anon key is safe to publish:
+  // Supabase -> Project Settings -> API Keys (Project URL + publishable key). This key is safe to publish:
   // the database rules only let visitors see public pets and send enquiries.
   // Leave empty to run in demo mode (data kept only in your own browser).
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://xxlkpkqbedrritklyyyk.supabase.co",
+  supabaseAnonKey: "sb_publishable_MvXUzjywcuVMm89YZWG5IQ_lod3s5-2", // publishable key (never put the secret key here)
 
   // Used by the admin for owner messages and price estimates.
   siteUrl: "https://homeforpaws.co/",
