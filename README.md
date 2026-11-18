@@ -14,10 +14,11 @@ No build step, no database. Open `index.html` in a browser, or host the folder o
 | `pet.html?id=...` | One profile page per pet (adoptable or guest) |
 | `pet-sitting.html` | Services, prices, how it works |
 | `book.html` | Booking request plus the fun pre-stay questionnaire |
+| `admin/` | **HQ**, the private admin area: enquiries, profiles, stays, care plans, reminders, shelters, emergency info. See [ADMIN-SETUP.md](ADMIN-SETUP.md) |
 
 ## Everyday edits
 
-**Add, change or remove a pet:** edit `assets/pets.js`. Each pet is one block. Copy an existing block, give it a unique `id`, and set `status` to `"adoptable"` (shelter pet) or `"guest"` (pet sitting). Put photos in `assets/pets/` and set `photo: "assets/pets/biscuit.jpg"`. Delete the sample pets (`sample: true`) before launch.
+**Add, change or remove a pet:** once HQ is connected to the database, do it in HQ (Pets). Until then, edit `assets/pets.js`. Each pet is one block. Copy an existing block, give it a unique `id`, and set `status` to `"adoptable"` (shelter pet) or `"guest"` (pet sitting). Put photos in `assets/pets/` and set `photo: "assets/pets/biscuit.jpg"`. Delete the sample pets (`sample: true`) before launch.
 
 **Contact details and form delivery:** edit `assets/config.js`.
 - Set `contactEmail` to your real email.
