@@ -36,7 +36,8 @@ section { padding: 56px 0; }
 .soft { background: var(--soft); }
 .center { text-align: center; }
 .lead { font-size: 1.15rem; color: var(--muted); max-width: 640px; }
-.center .lead { margin-left: auto; margin-right: auto; }
+.center .lead, .lead.center-block { margin-left: auto; margin-right: auto; }
+.lead.center-block { text-align: center; }
 
 /* Header */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
@@ -70,6 +71,7 @@ section { padding: 56px 0; }
 
 /* Cards and grids */
 .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grid.three { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
 .card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--soft); color: var(--brand); display: grid; place-items: center; margin-bottom: 12px; }
@@ -147,3 +149,9 @@ input:focus, select:focus, textarea:focus { outline: 3px solid #f5c9b2; border-c
 .site-footer { background: #2d2a26; color: #e9e1d6; padding: 40px 0; margin-top: 40px; font-size: 0.95rem; }
 .site-footer a { color: #ffd1b8; }
 .site-footer .wrap { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Belief quote */
+.belief { margin: 32px auto 0; max-width: 760px; background: var(--soft); border-left: 4px solid var(--brand); border-radius: var(--radius); padding: 24px 28px; }
+.belief p { font-family: "Fredoka", "Nunito", sans-serif; font-size: 1.2rem; line-height: 1.5; margin: 0 0 12px; }
+.belief footer { color: var(--muted); font-weight: 700; font-size: 0.95rem; }
+.belief footer::before { content: "\2014\00a0"; }
